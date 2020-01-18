@@ -1,0 +1,1 @@
+[{"name": "test.test_acronyms.Acronyms.test_empty", "status": "passed", "message": "", "passed": true, "points": ["p01-18.1"], "backtrace": []}, {"name": "test.test_acronyms.Acronyms.test_first", "status": "passed", "message": "", "passed": true, "points": ["p01-18.1"], "backtrace": []}]

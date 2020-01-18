@@ -1,0 +1,1 @@
+[{"name": "test.test_usemodule.Usemodule.test_main", "status": "passed", "message": "", "passed": true, "points": ["p01-20.1"], "backtrace": []}, {"name": "test.test_usemodule.Usemodule.test_module", "status": "passed", "message": "", "passed": true, "points": ["p01-20.1"], "backtrace": []}]
