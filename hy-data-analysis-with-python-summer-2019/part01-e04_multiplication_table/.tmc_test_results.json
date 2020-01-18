@@ -1,0 +1,1 @@
+[{"name": "test.test_multiplication_table.MultiplicationTable.test_content", "status": "passed", "message": "", "passed": true, "points": ["p01-04.1"], "backtrace": []}, {"name": "test.test_multiplication_table.MultiplicationTable.test_lines", "status": "passed", "message": "", "passed": true, "points": ["p01-04.1"], "backtrace": []}]
