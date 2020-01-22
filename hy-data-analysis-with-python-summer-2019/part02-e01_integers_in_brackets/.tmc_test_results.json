@@ -1,1 +1,1 @@
-[]
+[{"name": "test.test_integers_in_brackets.IntegersInBrackets.test_empty", "status": "passed", "message": "", "passed": true, "points": ["p02-01.1"], "backtrace": []}, {"name": "test.test_integers_in_brackets.IntegersInBrackets.test_first", "status": "passed", "message": "", "passed": true, "points": ["p02-01.1"], "backtrace": []}, {"name": "test.test_integers_in_brackets.IntegersInBrackets.test_second", "status": "passed", "message": "", "passed": true, "points": ["p02-01.1"], "backtrace": []}]

@@ -1,1 +1,1 @@
-[]
+[{"name": "test.test_file_extensions.FileExtensions.test_calls", "status": "passed", "message": "", "passed": true, "points": ["p02-07.1"], "backtrace": []}, {"name": "test.test_file_extensions.FileExtensions.test_first", "status": "passed", "message": "", "passed": true, "points": ["p02-07.1"], "backtrace": []}, {"name": "test.test_file_extensions.FileExtensions.test_main", "status": "passed", "message": "", "passed": true, "points": ["p02-07.2"], "backtrace": []}]

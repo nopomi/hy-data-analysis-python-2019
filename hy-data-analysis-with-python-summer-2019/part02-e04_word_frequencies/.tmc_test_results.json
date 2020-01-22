@@ -1,1 +1,1 @@
-[]
+[{"name": "test.test_word_frequencies.WordFrequencies.test_calls", "status": "passed", "message": "", "passed": true, "points": ["p02-04.1"], "backtrace": []}, {"name": "test.test_word_frequencies.WordFrequencies.test_first", "status": "passed", "message": "", "passed": true, "points": ["p02-04.1"], "backtrace": []}]
