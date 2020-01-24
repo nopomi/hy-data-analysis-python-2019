@@ -1,10 +1,16 @@
 #!/usr/bin/env python3
 
 class Prepend(object):
-    # Add the methods of the class here
+
+    def __init__(self, s):
+        self.start = s
+
+    def write(self, s):
+        print(self.start + s)
 
 def main():
-    pass
+    x = Prepend("This first")
+    x.write(" - this second")
 
 if __name__ == "__main__":
     main()
