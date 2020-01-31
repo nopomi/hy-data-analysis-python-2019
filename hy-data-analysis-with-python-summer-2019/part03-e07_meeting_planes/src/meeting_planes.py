@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 
 import numpy as np
+from scipy import linalg
 
 def meeting_planes(a1, b1, c1, a2, b2, c2, a3, b3, c3):
-    return []
+    x = linalg.solve([[b1, a1, -1],[b2, a2, -1],[b3, a3, -1]],[-c1,-c2,-c3])
+    return x
 
 def main():
     a1=1
