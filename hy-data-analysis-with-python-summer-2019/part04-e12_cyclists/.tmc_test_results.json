@@ -1,1 +1,1 @@
-[]
+[{"name": "test.test_cyclists.Cyclists.test_called", "status": "passed", "message": "", "passed": true, "points": ["p04-12.1"], "backtrace": []}, {"name": "test.test_cyclists.Cyclists.test_columns", "status": "passed", "message": "", "passed": true, "points": ["p04-12.1"], "backtrace": []}, {"name": "test.test_cyclists.Cyclists.test_shape", "status": "passed", "message": "", "passed": true, "points": ["p04-12.1"], "backtrace": []}]
