@@ -1,1 +1,1 @@
-[]
+[{"name": "test.test_below_zero.BelowZero.test_called", "status": "passed", "message": "", "passed": true, "points": ["p04-11.1"], "backtrace": []}, {"name": "test.test_below_zero.BelowZero.test_output", "status": "passed", "message": "", "passed": true, "points": ["p04-11.1"], "backtrace": []}, {"name": "test.test_below_zero.BelowZero.test_value", "status": "passed", "message": "", "passed": true, "points": ["p04-11.1"], "backtrace": []}]
