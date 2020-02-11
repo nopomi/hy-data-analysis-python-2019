@@ -1,1 +1,1 @@
-[]
+[{"name": "test.test_subsetting_with_loc.SubsettingWithLoc.test_columns_and_indices", "status": "passed", "message": "", "passed": true, "points": ["p04-07.1"], "backtrace": []}, {"name": "test.test_subsetting_with_loc.SubsettingWithLoc.test_shape", "status": "passed", "message": "", "passed": true, "points": ["p04-07.1"], "backtrace": []}]
