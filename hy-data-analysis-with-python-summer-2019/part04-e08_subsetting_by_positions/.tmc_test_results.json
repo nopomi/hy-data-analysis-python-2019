@@ -1,1 +1,1 @@
-[]
+[{"name": "test.test_subsetting_by_positions.SubsettingByPositions.test_called", "status": "passed", "message": "", "passed": true, "points": ["p04-08.1"], "backtrace": []}, {"name": "test.test_subsetting_by_positions.SubsettingByPositions.test_shape_and_columns", "status": "passed", "message": "", "passed": true, "points": ["p04-08.1"], "backtrace": []}]
