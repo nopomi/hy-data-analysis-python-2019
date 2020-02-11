@@ -1,1 +1,1 @@
-[]
+[{"name": "test.test_average_temperature.Average_temperature.test_called", "status": "passed", "message": "", "passed": true, "points": ["p04-10.1"], "backtrace": []}, {"name": "test.test_average_temperature.Average_temperature.test_output", "status": "passed", "message": "", "passed": true, "points": ["p04-10.1"], "backtrace": []}, {"name": "test.test_average_temperature.Average_temperature.test_value", "status": "passed", "message": "", "passed": true, "points": ["p04-10.1"], "backtrace": []}]

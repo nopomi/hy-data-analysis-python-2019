@@ -3,10 +3,12 @@
 import pandas as pd
 
 def average_temperature():
-    return 0.0
+    wh = pd.read_csv("src/kumpula-weather-2017.csv")
+    wh = wh[wh['m'] == 7]
+    return wh["Air temperature (degC)"].mean()
 
 def main():
-    return
+    print("Average temperature in July: {:.1f}".format(average_temperature()))
 
 if __name__ == "__main__":
     main()
