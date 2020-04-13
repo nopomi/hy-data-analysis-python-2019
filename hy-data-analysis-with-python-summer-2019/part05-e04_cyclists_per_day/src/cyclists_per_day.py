@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 
 days = dict(zip("ma ti ke to pe la su".split(), "Mon Tue Wed Thu Fri Sat Sun".split()))
@@ -29,9 +30,10 @@ def cyclists_per_day():
 
 def main():
     df = cyclists_per_day()
-    print(df.shape)
-    print(df.keys())
-    print(df.head())
+    plt.plot(df.loc[(2017, 8)])
+    plt.xticks(np.arange(0,32,1))
+    plt.legend(loc='upper center', shadow=True, ncol=1)
+    plt.show()
 
 if __name__ == "__main__":
     main()
