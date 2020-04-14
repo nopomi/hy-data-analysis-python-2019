@@ -25,7 +25,7 @@ def main():
     print(f'Suicide DataFrame has {su} rows')
     print(f'Temperature DataFrame has {wh} rows')
     print(f'Common DataFrame has {common} rows')
-    print(f'Spearman correlation: {correlation}')
+    print(f'Spearman correlation: {correlation:.1f}')
 
 if __name__ == "__main__":
     main()
