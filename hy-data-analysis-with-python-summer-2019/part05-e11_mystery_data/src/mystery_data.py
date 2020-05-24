@@ -12,7 +12,7 @@ def mystery_data():
 def main():
     coefficients = mystery_data()
     for i, coef in enumerate(coefficients):
-        print(f"Coefficient for X{i} is {coef}")
+        print(f"Coefficient for X{i+1} is {coef}")
 
 if __name__ == "__main__":
     main()
