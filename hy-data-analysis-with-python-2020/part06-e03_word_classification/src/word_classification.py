@@ -37,20 +37,50 @@ def load_english():
     return lines
 
 def get_features(a):
-    return np.array([[]])
+    features = np.zeros((len(a),29))
+    for i, word in enumerate(a):
+        for j, char in enumerate(alphabet):
+            features[i, j] += word.count(char)
+    return features
 
 def contains_valid_chars(s):
-    return True
+    return set(s).issubset(alphabet_set)
 
 def get_features_and_labels():
-    return np.array([[]]), np.array([])
+
+    fin = load_finnish()
+    fin = [i.lower() for i in fin]
+    fin = [x for x in fin if contains_valid_chars(x)]
+
+    eng = load_english()
+    eng = [x for x in eng if x[0].islower()]
+    eng = [i.lower() for i in eng]
+    eng = [x for x in eng if contains_valid_chars(x)]
+
+    fin_feat = get_features(fin)
+    eng_feat = get_features(eng)
+    X = np.concatenate((fin_feat, eng_feat))
+
+    y = np.zeros(len(fin)+len(eng))
+    y[len(fin):] = 1
+
+    return X, y
 
 
 def word_classification():
-    return []
+    X, y = get_features_and_labels()
+    model = MultinomialNB()
+    #scores = cross_val_score(model, X, y, cv=5)
+    gen = model_selection.KFold(n_splits=5, shuffle=True, random_state=0)
+    scores = cross_val_score(model, X, y, cv=gen)
+    return scores
 
 
 def main():
+    #print(get_features(np.array(["palloä-", "keihäs", "Tietokone", "mörkö"])))
+    #print(contains_valid_chars("aoisdjhasdjkaskdää-"))
+    #print(contains_valid_chars("ajsdmasdkasikd9jkasdk"))
+    get_features_and_labels()
     print("Accuracy scores are:", word_classification())
 
 if __name__ == "__main__":
