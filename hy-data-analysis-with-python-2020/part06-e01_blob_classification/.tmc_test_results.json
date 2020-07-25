@@ -1,0 +1,1 @@
+[{"name": "test.test_blob_classification.BlobClassification.test_calls", "status": "passed", "message": "", "passed": true, "points": ["p06-01.1"], "backtrace": []}, {"name": "test.test_blob_classification.BlobClassification.test_correctness", "status": "passed", "message": "", "passed": true, "points": ["p06-01.1"], "backtrace": []}]

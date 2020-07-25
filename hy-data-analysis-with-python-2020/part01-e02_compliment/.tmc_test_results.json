@@ -1,0 +1,1 @@
+[{"name": "test.test_compliment.Compliment.test_first", "status": "passed", "message": "", "passed": true, "points": ["p01-02.1"], "backtrace": []}, {"name": "test.test_compliment.Compliment.test_second", "status": "passed", "message": "", "passed": true, "points": ["p01-02.1"], "backtrace": []}]
