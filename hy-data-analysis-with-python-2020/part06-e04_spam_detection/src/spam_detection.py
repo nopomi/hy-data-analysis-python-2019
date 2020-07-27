@@ -3,35 +3,41 @@ import gzip
 import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
 
 
 def read_files(fraction):
-    ham_lines = int(len(gzip.open("src/spam.txt.gz").readlines()) * fraction)
-    spam_lines = int(len(gzip.open("src/spam.txt.gz").readlines()) * fraction)
+    ham_lines = gzip.open("src/ham.txt.gz").readlines()
+    ham_len = int(fraction * len(ham_lines))
 
-    ham = np.array(ham_lines)
-    with gzip.open("src/ham.txt.gz") as f:
-        for i, line in enumerate(f):
-            if i > ham_lines: break
-            if line == "": continue
-            ham = np.append(ham,line)
+    spam_lines = gzip.open("src/spam.txt.gz").readlines()
+    spam_len = int(fraction * len(spam_lines))
 
-    spam = np.array(spam_lines)
-    with gzip.open("src/spam.txt.gz") as f:
-        for i, line in enumerate(f):
-            if i > spam_lines: break
-            if line== "": continue
-            spam = np.append(spam, line)
+    ham = ham_lines[:ham_len]
+    spam = spam_lines[:spam_len]
 
     return ham, spam
 
 def spam_detection(random_state=0, fraction=1.0):
     ham, spam = read_files(fraction)
+    X_rows = ham + spam
+
     vectorizer = CountVectorizer()
-    X_ham = vectorizer.fit_transform(ham)
-    X_spam = vectorizer.fit_transform(spam)
-    print(X_ham.dtype)
-    return 0.0, 0, 0
+    X = vectorizer.fit_transform(X_rows).toarray()
+
+    y = np.zeros(len(X_rows))
+    y[len(ham):] = 1
+
+    X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=random_state, train_size=0.75)
+    model = MultinomialNB()
+    model.fit(X_train, y_train)
+    y_fitted = model.predict(X_test)
+
+    score = accuracy_score(y_test, y_fitted)
+    misclassified = np.sum(y_test != y_fitted)
+    
+    return score, len(X_test), misclassified
 
 def main():
     accuracy, total, misclassified = spam_detection()
